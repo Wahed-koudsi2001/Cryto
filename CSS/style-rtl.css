@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+:root {
+    --default-font: "Tajawal", sans-serif;
+}
+
+.scrolling-content .scrolling-item .icon-box{
+    padding-left: 20px;
+    padding-right: 2px;
+}
