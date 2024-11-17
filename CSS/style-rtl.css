@@ -4,7 +4,18 @@
     --default-font: "Tajawal", sans-serif;
 }
 
-.scrolling-content .scrolling-item .icon-box{
+.scrolling-content .scrolling-item .icon-box {
     padding-left: 20px;
     padding-right: 2px;
+}
+
+.about-content .about-list-item ul li::before {
+    right: -30px;
+}
+.about-info-item .icon-box{
+    padding-right: 0;
+    padding-left: 15px;
+}
+.price-carousel .price-item p span{
+    padding-right: 30px;
 }

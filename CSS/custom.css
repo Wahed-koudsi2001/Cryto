@@ -1030,6 +1030,7 @@ header.main-header .header-sticky.active {
     border-radius: 10px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    height: 100%;
 }
 
 .how-it-works-item .icon-box,
@@ -1057,23 +1058,6 @@ header.main-header .header-sticky.active {
 .service-item p,
 .why-choose-us-item p {
     margin-bottom: 0;
-}
-
-/******************************************/
-/****  	 08. Exclusive Partners css    ****/
-/******************************************/
-
-.exclusive-partners {
-    padding: 60px 0;
-}
-
-.partners-logos {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 50px;
-    row-gap: 50px;
-    align-items: center;
-    justify-content: center;
 }
 
 /******************************************/
@@ -1204,70 +1188,6 @@ header.main-header .header-sticky.active {
     }
     to {
         transform: translateX(calc(-100% - var(--gap)));
-    }
-}
-
-/******************************************/
-/****   	 11. Intro Video css   	   ****/
-/******************************************/
-
-.intro-video {
-    padding: 60px 0;
-}
-
-.intro-video-box {
-    position: relative;
-}
-
-.intro-video-box .video-play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.intro-video-box .video-play-button a {
-    display: block;
-    position: relative;
-}
-
-.video-play-button a:before {
-    content: "";
-    position: absolute;
-    top: -30%;
-    left: -30%;
-    width: 160%;
-    height: 160%;
-    border: 3px solid var(--accent-color);
-    border-radius: 50%;
-    transform: scale(0.6);
-    z-index: -1;
-    animation: border-zooming 1s infinite linear;
-}
-
-.video-play-button a:after {
-    content: "";
-    position: absolute;
-    top: -30%;
-    left: -30%;
-    width: 160%;
-    height: 160%;
-    border: 3px solid var(--accent-color);
-    border-radius: 50%;
-    transform: scale(0.6);
-    z-index: -1;
-    animation: border-zooming 1s infinite linear;
-    animation-delay: 0.3s;
-}
-
-.intro-video-box .video-play-button a img {
-    max-width: 80px;
-}
-
-@keyframes border-zooming {
-    100% {
-        transform: scale(1);
-        opacity: 0;
     }
 }
 
@@ -2015,10 +1935,6 @@ header.main-header .header-sticky.active {
     margin-bottom: 0;
 }
 
-.about-exclusive-partners {
-    padding: 60px 0 100px;
-}
-
 /******************************************/
 /****     20. Servcies Page css 	   ****/
 /******************************************/
@@ -2645,10 +2561,7 @@ header.main-header .header-sticky.active {
         margin-bottom: 15px;
     }
 
-    .exclusive-partners {
-        padding: 40px 0;
-    }
-
+    
     .partners-logos .partner-item:nth-of-type(3n + 3) {
         margin-right: 0;
     }
@@ -2663,14 +2576,6 @@ header.main-header .header-sticky.active {
 
     .price-section {
         padding: 40px 0;
-    }
-
-    .intro-video {
-        padding: 40px 0;
-    }
-
-    .intro-video-box .video-play-button a img {
-        max-width: 70px;
     }
 
     .why-choose-us {
@@ -2840,9 +2745,7 @@ header.main-header .header-sticky.active {
         width: calc(100% - 70px);
     }
 
-    .about-exclusive-partners {
-        padding: 40px 0 80px;
-    }
+
 
     .services-page {
         padding: 80px 0 10px;
@@ -3109,10 +3012,6 @@ header.main-header .header-sticky.active {
         font-size: 20px;
     }
 
-    .exclusive-partners {
-        padding: 30px 0;
-    }
-
     .partners-logos {
         gap: 30px;
     }
@@ -3157,14 +3056,6 @@ header.main-header .header-sticky.active {
 
     .price-carousel .price-item a {
         padding: 8px 16px;
-    }
-
-    .intro-video {
-        padding: 30px 0;
-    }
-
-    .intro-video-box .video-play-button a img {
-        max-width: 40px;
     }
 
     .why-choose-us {
@@ -3401,10 +3292,6 @@ header.main-header .header-sticky.active {
     .vision-mission-header h3 {
         font-size: 30px;
         width: calc(100% - 60px);
-    }
-
-    .about-exclusive-partners {
-        padding: 30px 0 60px;
     }
 
     .services-page {
