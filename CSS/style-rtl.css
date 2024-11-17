@@ -8,14 +8,36 @@
     padding-left: 20px;
     padding-right: 2px;
 }
-
+.about-content .about-list-item ul li {
+    padding-left: 0;
+}
 .about-content .about-list-item ul li::before {
     right: -30px;
 }
-.about-info-item .icon-box{
+@media (max-width: 768px) {
+    .about-content .about-list-item ul li {
+        padding-right: 30px;
+    }
+    .about-content .about-list-item ul li::before {
+        right: 0;
+    }
+}
+.about-info-item .icon-box {
     padding-right: 0;
     padding-left: 15px;
 }
-.price-carousel .price-item p span{
+.price-carousel .price-item p span {
     padding-right: 30px;
+}
+.testimonial-header .author-image {
+    padding-right: 0px;
+    padding-left: 20px;
+}
+.footer-about .footer-social-links ul li {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.footer-contact-info-item .icon-box {
+    padding-left: 10px;
+    padding-right: 0px;
 }

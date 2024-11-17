@@ -284,9 +284,9 @@ a:focus {
 
 .loading-container,
 .loading {
-    height: 100px;
+    height: 200px;
     position: relative;
-    width: 100px;
+    width: 200px;
     border-radius: 100%;
 }
 
@@ -310,8 +310,8 @@ a:focus {
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 100px;
     transform: translate(-50%, -50%);
+    width: 200px;
 }
 
 @keyframes rotate-loading {
@@ -428,6 +428,7 @@ header.main-header .header-sticky.active {
 .navbar-brand {
     padding: 0;
     width: 150px;
+    margin-right: 0;
 }
 
 .main-menu {
@@ -440,7 +441,7 @@ header.main-header .header-sticky.active {
 }
 
 .main-menu ul li {
-    margin: 0 15px;
+    margin: 0 12px;
     position: relative;
 }
 
@@ -1674,6 +1675,10 @@ header.main-header .header-sticky.active {
     color: inherit;
 }
 
+.footer-menu ul li img {
+    width: 50px;
+}
+
 .footer-contact-info-item {
     display: flex;
     align-items: center;
@@ -2455,6 +2460,10 @@ header.main-header .header-sticky.active {
         display: none !important;
     }
 
+    .navbar-brand {
+        margin-right: 1rem;
+    }
+
     .btn-default {
         padding: 14px 24px;
     }
@@ -2490,7 +2499,7 @@ header.main-header .header-sticky.active {
 
     .hero .section-title {
         margin-bottom: 30px;
-        padding: 0 60px;
+        padding: 0;
     }
 
     .hero.hero-slider .hero-slider-layout1 .hero-slide {
@@ -2561,7 +2570,6 @@ header.main-header .header-sticky.active {
         margin-bottom: 15px;
     }
 
-    
     .partners-logos .partner-item:nth-of-type(3n + 3) {
         margin-right: 0;
     }
@@ -2745,8 +2753,6 @@ header.main-header .header-sticky.active {
         width: calc(100% - 70px);
     }
 
-
-
     .services-page {
         padding: 80px 0 10px;
     }
@@ -2918,9 +2924,8 @@ header.main-header .header-sticky.active {
     }
 
     .hero .section-title {
-        padding: 0;
         text-align: center !important;
-    }
+    }s
 
     .hero-content-body p {
         font-size: 16px;
