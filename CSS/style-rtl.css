@@ -41,3 +41,7 @@
     padding-left: 10px;
     padding-right: 0px;
 }
+.accordion-header .accordion-button {
+    text-align: right;
+}
+
