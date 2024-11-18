@@ -1716,14 +1716,15 @@ header.main-header .header-sticky.active {
     margin: 0;
 }
 
-.footer-policy-menu ul li {
+.footer-policy-menu ul a {
     display: inline-block;
     position: relative;
     padding-right: 12px;
     margin-right: 6px;
+    color: var(--text-color);
 }
 
-.footer-policy-menu ul li::before {
+.footer-policy-menu ul a::before {
     content: "|";
     position: absolute;
     top: 50%;
@@ -1733,16 +1734,16 @@ header.main-header .header-sticky.active {
     transform: translate(0, -50%);
 }
 
-.footer-policy-menu ul li:last-child {
+.footer-policy-menu ul a:first-child {
     padding-right: 0;
     margin-right: 0;
 }
 
-.footer-policy-menu ul li:last-child::before {
+.footer-policy-menu ul a:first-child::before {
     display: none;
 }
 
-.footer-policy-menu ul li a {
+.footer-policy-menu ul a {
     color: inherit;
 }
 
@@ -1830,6 +1831,7 @@ header.main-header .header-sticky.active {
 .about-footer .about-info-item h3 {
     font-size: 22px;
     display: flex;
+    gap: 10px;
     align-items: center;
     margin-bottom: 0;
 }

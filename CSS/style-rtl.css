@@ -44,4 +44,15 @@
 .accordion-header .accordion-button {
     text-align: right;
 }
-
+.footer-policy-menu ul li::before {
+    left: 0;
+}
+.footer-policy-menu ul li {
+    padding-right: 0;
+    margin-right: 0;
+    padding-left: 12px;
+    margin-left: 6px;
+}
+.footer-policy-menu ul li:last-child {
+    padding-left: 0;
+}
