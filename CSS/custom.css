@@ -1307,7 +1307,6 @@ header.main-header .header-sticky.active {
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
-    background: var(--background-color) url("../images/icon-down-arrow.svg") no-repeat center right 10px;
     background-size: 10px;
 }
 
@@ -2925,7 +2924,7 @@ header.main-header .header-sticky.active {
 
     .hero .section-title {
         text-align: center !important;
-    }s
+    }
 
     .hero-content-body p {
         font-size: 16px;
