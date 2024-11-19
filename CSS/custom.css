@@ -1175,7 +1175,7 @@ header.main-header .header-sticky.active {
     content: "\f0d8";
     position: absolute;
     top: 0;
-    right: 10px;
+    left: 10px;
     bottom: auto;
     color: inherit;
     font-family: "Font Awesome 6 Free";
