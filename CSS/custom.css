@@ -38,6 +38,8 @@
 /****    01. Global Variables    ****/
 /************************************/
 
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
 :root {
     --primary-color: #ffffff;
     --secondary-color: #121923;
@@ -48,7 +50,7 @@
     --error-color: rgb(230, 87, 87);
     --red-color: #ff0000;
     --green-color: #008000;
-    --default-font: "DM Sans", sans-serif;
+    --default-font: "Tajawal", sans-serif;
 }
 
 /************************************/
@@ -193,7 +195,7 @@ a:focus {
 .btn-default {
     display: inline-block;
     font-family: var(--default-font);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     background: var(--accent-color);
     color: var(--primary-color);
@@ -339,6 +341,7 @@ a:focus {
     padding-left: 30px;
     position: relative;
     margin-bottom: 15px;
+    text-align: left !important;
 }
 
 .section-title h3:before {
@@ -373,6 +376,7 @@ a:focus {
 .section-title h1 {
     font-size: 50px;
     letter-spacing: -0.02em;
+    text-align: left;
 }
 
 .section-title h1 span,
@@ -454,7 +458,7 @@ header.main-header .header-sticky.active {
 }
 
 .main-menu ul li a {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     padding: 12px 10px !important;
     color: var(--primary-color);
@@ -464,12 +468,12 @@ header.main-header .header-sticky.active {
 .main-menu ul li.highlighted-menu a {
     display: inline-block;
     font-family: var(--default-font);
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 600;
     background: var(--accent-color);
     color: var(--primary-color);
     border-radius: 6px;
-    padding: 10px 18px !important;
+    padding: 10px 30px !important;
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -720,7 +724,6 @@ header.main-header .header-sticky.active {
 
 .hero .section-title {
     margin-bottom: 40px;
-    text-align: right !important;
 }
 
 .hero-content-body {
@@ -729,12 +732,13 @@ header.main-header .header-sticky.active {
 }
 
 .hero .hero-content .hero-content-footer {
-    text-align: right !important;
+    text-align: left !important;
 }
 
 .hero-content-body p {
     font-size: 18px;
     color: var(--primary-color);
+    text-align: left;
 }
 
 .hero-video .hero-bg-video {
@@ -863,8 +867,8 @@ header.main-header .header-sticky.active {
 }
 
 .scrolling-content .scrolling-item .icon-box {
-    padding-right: 20px;
-    padding-left: 2px;
+    padding-left: 20px;
+    padding-right: 2px;
 }
 
 .scrolling-content .scrolling-item .icon-box img {
@@ -1171,7 +1175,7 @@ header.main-header .header-sticky.active {
     content: "\f0d8";
     position: absolute;
     top: 0;
-    left: 10px;
+    right: 10px;
     bottom: auto;
     color: inherit;
     font-family: "Font Awesome 6 Free";
@@ -1740,14 +1744,18 @@ header.main-header .header-sticky.active {
     bottom: auto;
     color: var(--text-color);
     transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
 }
 
-.footer-policy-menu ul a:first-child {
+.footer-policy-menu ul a:last-child {
     padding-right: 0;
     margin-right: 0;
 }
 
-.footer-policy-menu ul a:first-child::before {
+.footer-policy-menu ul a:last-child::before {
     display: none;
 }
 
@@ -1837,7 +1845,7 @@ header.main-header .header-sticky.active {
 }
 
 .about-footer .about-info-item h3 {
-    font-size: 22px;
+    font-size: 20px;
     display: flex;
     gap: 10px;
     align-items: center;

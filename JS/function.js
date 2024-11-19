@@ -159,9 +159,6 @@
         offset: '50%'
     });
 
-    /* Init Counter */
-    $('.counter').counterUp({ delay: 5, time: 2000 });
-
     /* Image Reveal Animation */
     if ($('.reveal').length) {
         gsap.registerPlugin(ScrollTrigger);
@@ -240,103 +237,7 @@
         },
     });
 
-    /* Contact form validation */
-    var $contactform = $("#contactForm");
-    if ($contactform.length) {
-        $contactform.validator({ focus: false }).on("submit", function (event) {
-            if (!event.isDefaultPrevented()) {
-                event.preventDefault();
-                submitForm();
-            }
-        });
-
-        function submitForm() {
-            /* Initiate Variables With Form Content*/
-            var name = $("#name").val();
-            var email = $("#email").val();
-            var phone = $("#phone").val();
-            var subject = $("#subject").val();
-            var message = $("#msg").val();
-
-            $.ajax({
-                type: "POST",
-                url: "form-process.php",
-                data: "name=" + name + "&email=" + email + "&phone=" + phone + "&subject=" + subject + "&message=" + message,
-                success: function (text) {
-                    if (text == "success") {
-                        formSuccess();
-                    } else {
-                        submitMSG(false, text);
-                    }
-                }
-            });
-        }
-
-        function formSuccess() {
-            $contactform[0].reset();
-            submitMSG(true, "Message Sent Successfully!")
-        }
-
-        function submitMSG(valid, msg) {
-            if (valid) {
-                var msgClasses = "h3 text-success";
-            } else {
-                var msgClasses = "h3 text-danger";
-            }
-            $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-        }
-    }
     /* Contact form validation end */
-
-
-    /* BitconiAX form validation */
-    var $solarform = $("#solarForm");
-
-    if ($solarform.length) {
-        $solarform.validator({ focus: false }).on("submit", function (event) {
-            if (!event.isDefaultPrevented()) {
-                event.preventDefault();
-                solarsubmitForm();
-            }
-        });
-
-        function solarsubmitForm() {
-            /* Initiate Variables With Form Content*/
-            var name = $("#name").val();
-            var email = $("#email").val();
-            var phone = $("#phone").val();
-            var bill = $("#bill").val();
-            var capacity = $("#capacity").val();
-
-            $.ajax({
-                type: "POST",
-                url: "solar-form-process.php",
-                data: "name=" + name + "&email=" + email + "&phone=" + phone + "&bill=" + bill + "&capacity=" + capacity,
-                success: function (text) {
-                    if (text == "success") {
-                        solarformSuccess();
-                    } else {
-                        solarsubmitMSG(false, text);
-                    }
-                }
-            });
-        }
-
-        function solarformSuccess() {
-            $solarform[0].reset();
-            solarsubmitMSG(true, "Message Sent Successfully!")
-        }
-
-        function solarsubmitMSG(valid, msg) {
-            if (valid) {
-                var msgClasses = "h3 text-success";
-            } else {
-                var msgClasses = "h3 text-danger";
-            }
-            $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-        }
-    }
-    /* Solar form validation end */
 
     /* Animated Wow Js */
     new WOW().init();
