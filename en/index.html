@@ -1452,8 +1452,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">Contact us</h3>
-                        <h2 class="text-anime">Contact us</h2>
+                        <h3 class="wow fadeInUp">Contact US</h3>
+                        <h2 class="text-anime">Contact US</h2>
                     </div>
                 </div>
             </div>
@@ -1466,36 +1466,39 @@
                                 <div class="form-group col-md-6 mb-4">
                                     <input type="text" name="name" class="form-control" id="name"
                                         placeholder="Your name" required>
+                                    <span class="error-message" id="nameError"></span>
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="email" name="email" class="form-control" id="email"
-                                        placeholder="E-mail" required>
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email"
+                                        required>
+                                    <span class="error-message" id="emailError"></span>
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="phone" class="form-control" id="phone"
+                                    <input type="number" name="phone" class="form-control" id="phone"
                                         placeholder="Phone number" required>
+                                    <span class="error-message" id="phoneError"></span>
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
                                     <input type="text" name="subject" class="form-control" id="subject"
                                         placeholder="Subject" required>
+                                    <span class="error-message" id="subjectError"></span>
                                 </div>
 
                                 <div class="form-group col-md-12 mb-4">
                                     <textarea name="msg" class="form-control" id="message" rows="5"
-                                        placeholder="Write your message" required></textarea>
+                                        placeholder="Write your message here..." required></textarea>
+                                    <span class="error-message" id="messageError"></span>
                                 </div>
 
                                 <div class="col-md-12 text-center">
-                                    <!-- Change the button type to 'submit' -->
-                                    <button type="submit" id="submitButton" class="btn-default">Send your
+                                    <button type="button" id="submitButton" class="btn-default">Send your
                                         message</button>
                                 </div>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -1747,6 +1750,7 @@
         const popup = document.querySelector('.popup');
         const closeButton = document.querySelector('.popup div i');
         const submitButton = document.querySelector('#submitButton');
+        const contactForm = document.querySelector('#contactForm');
 
         // Select all input fields
         const nameInput = document.querySelector('#name');
@@ -1755,47 +1759,59 @@
         const subjectInput = document.querySelector('#subject');
         const messageInput = document.querySelector('#message');
 
-        // Function to check if all required fields are filled
-        function areFieldsFilled() {
-            return nameInput.value.trim() !== '' &&
-                emailInput.value.trim() !== '' &&
-                phoneInput.value.trim() !== '' &&
-                subjectInput.value.trim() !== '' &&
-                messageInput.value.trim() !== '';
+        // Function to validate individual fields
+        function validateField(input, errorElement, message) {
+            if (input.value.trim() === '') {
+                errorElement.textContent = message; // Show the error message
+                return false;
+            } else {
+                errorElement.textContent = ''; // Clear the error message
+                return true;
+            }
         }
 
-        // Function to show the popup with animation
-        function showPopup() {
-            popup.style.display = 'block';
-            gsap.fromTo(popup, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: .3 });
-        }
+        // Handle button click to validate the form
+        submitButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default form submission
 
-        // Function to close the popup with animation
-        function closePopup() {
+            let isValid = true;
+
+            // Validate each field
+            isValid &= validateField(nameInput, document.querySelector('#nameError'), 'Name required');
+            isValid &= validateField(emailInput, document.querySelector('#emailError'), 'Email required');
+            isValid &= validateField(phoneInput, document.querySelector('#phoneError'), 'Phone number required');
+            isValid &= validateField(subjectInput, document.querySelector('#subjectError'), 'Subject required');
+            isValid &= validateField(messageInput, document.querySelector('#messageError'), 'Message required');
+
+            // If all fields are valid, show the popup and submit the form
+            if (isValid) {
+                popup.style.display = 'block';
+                gsap.fromTo(popup, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.5 });
+
+                // Programmatically submit the form
+                contactForm.submit();
+            }
+        });
+
+        // Close popup when clicking the close button
+        closeButton.addEventListener('click', () => {
             gsap.to(popup, {
                 opacity: 0,
                 scale: 0.8,
                 duration: 0.5,
                 onComplete: () => (popup.style.display = 'none'),
             });
-        }
-
-        // Handle button click to validate the form and show the popup
-        submitButton.addEventListener('click', (e) => {
-            if (areFieldsFilled()) {
-                showPopup();
-            } else {
-                alert("الرجاء ملء جميع الحقول قبل إرسال الرسالة.");
-            }
         });
-
-        // Close popup when clicking the close button
-        closeButton.addEventListener('click', closePopup);
 
         // Close popup when clicking outside the box
         popup.addEventListener('click', function (e) {
             if (e.target === popup) {
-                closePopup();
+                gsap.to(popup, {
+                    opacity: 0,
+                    scale: 0.8,
+                    duration: 0.5,
+                    onComplete: () => (popup.style.display = 'none'),
+                });
             }
         });
     </script>
