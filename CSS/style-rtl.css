@@ -99,3 +99,7 @@
 .footer-policy-menu ul a:last-child::before {
     display: none;
 }
+.price-carousel .price-item p span::before {
+    left: initial;
+    right: 10px;
+}
