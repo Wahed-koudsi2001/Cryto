@@ -341,7 +341,6 @@ a:focus {
     padding-left: 30px;
     position: relative;
     margin-bottom: 15px;
-    text-align: left !important;
 }
 
 .section-title h3:before {
@@ -2994,7 +2993,7 @@ header.main-header .header-sticky.active {
         padding: 30px 0 10px;
     }
 
-    .how-it-works-item{
+    .how-it-works-item {
         margin-bottom: 20px;
     }
 
