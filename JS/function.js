@@ -238,7 +238,9 @@
     });
 
     /* Contact form validation end */
-
+    
+    /* Init Counter */
+    $('.counter').counterUp({ delay: 5, time: 2000 });
     /* Animated Wow Js */
     new WOW().init();
 })(jQuery);

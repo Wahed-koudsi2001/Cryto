@@ -944,7 +944,7 @@ header.main-header .header-sticky.active {
 }
 
 .about-images .about-image {
-    width: 48.8%;
+    width: 100%;
 }
 
 .about-images .about-image figure {
@@ -988,24 +988,17 @@ header.main-header .header-sticky.active {
 
 .about-content .about-list-item ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0 25px;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
 }
 
 .about-content .about-list-item ul li {
     font-size: 16px;
-    padding-left: 30px;
-    width: calc(50% - 10px);
     margin-right: 20px;
     margin-bottom: 20px;
     position: relative;
-}
-
-.about-content .about-list-item ul li:nth-of-type(2n + 2) {
-    margin-right: 0;
 }
 
 .about-content .about-list-item ul li::before {
@@ -1034,7 +1027,6 @@ header.main-header .header-sticky.active {
 
 .how-it-works-item,
 .service-item,
-.why-choose-us-item,
 .download-app-item {
     padding: 50px;
     text-align: center;
@@ -1047,29 +1039,25 @@ header.main-header .header-sticky.active {
 }
 
 .how-it-works-item .icon-box,
-.service-item .icon-box,
-.why-choose-us-item .icon-box {
+.service-item .icon-box {
     margin-bottom: 30px;
 }
 
 .how-it-works-item .icon-box img,
-.service-item .icon-box img,
-.why-choose-us-item .icon-box img {
+.service-item .icon-box img {
     width: 80px;
     height: 80px;
 }
 
 .how-it-works-item h3,
 .service-item h3,
-.why-choose-us-item h3,
 .download-app-item h3 {
     font-size: 22px;
     margin-bottom: 20px;
 }
 
 .how-it-works-item p,
-.service-item p,
-.why-choose-us-item p {
+.service-item p {
     margin-bottom: 0;
 }
 
@@ -1081,7 +1069,7 @@ header.main-header .header-sticky.active {
     padding: 60px 0 30px;
 }
 
-.our-services .row .col-lg-4.col-md-6 {
+.our-services .row .col-lg-3.col-md-6 {
     margin-bottom: 30px;
 }
 
@@ -1202,14 +1190,6 @@ header.main-header .header-sticky.active {
     to {
         transform: translateX(calc(-100% - var(--gap)));
     }
-}
-
-/******************************************/
-/****  	    12. Why Choose Us css      ****/
-/******************************************/
-
-.why-choose-us {
-    padding: 60px 0;
 }
 
 /******************************************/
@@ -1899,7 +1879,7 @@ header.main-header .header-sticky.active {
 }
 
 .counter-section {
-    padding: 60px 0;
+    padding: 0;
 }
 
 .counter-section .container {
@@ -2546,7 +2526,7 @@ header.main-header .header-sticky.active {
     }
 
     .about-images .about-image {
-        width: 48.2%;
+        width: 100%;
     }
 
     .about-info-item {
@@ -2563,27 +2543,23 @@ header.main-header .header-sticky.active {
     }
 
     .how-it-works-item,
-    .service-item,
-    .why-choose-us-item {
+    .service-item, {
         padding: 30px;
     }
 
     .how-it-works-item .icon-box,
-    .service-item .icon-box,
-    .why-choose-us-item .icon-box {
+    .service-item .icon-box {
         margin-bottom: 20px;
     }
 
     .how-it-works-item .icon-box img,
-    .service-item .icon-box img,
-    .why-choose-us-item .icon-box img {
+    .service-item .icon-box img {
         width: 60px;
         height: 60px;
     }
 
     .how-it-works-item h3,
-    .service-item h3,
-    .why-choose-us-item h3 {
+    .service-item h3 {
         margin-bottom: 15px;
     }
 
@@ -2600,10 +2576,6 @@ header.main-header .header-sticky.active {
     }
 
     .price-section {
-        padding: 40px 0;
-    }
-
-    .why-choose-us {
         padding: 40px 0;
     }
 
@@ -3022,14 +2994,12 @@ header.main-header .header-sticky.active {
         padding: 30px 0 10px;
     }
 
-    .how-it-works-item,
-    .why-choose-us-item {
+    .how-it-works-item{
         margin-bottom: 20px;
     }
 
     .how-it-works-item h3,
     .service-item h3,
-    .why-choose-us-item h3,
     .download-app-item h3 {
         font-size: 20px;
     }
@@ -3046,7 +3016,7 @@ header.main-header .header-sticky.active {
         padding: 30px 0 10px;
     }
 
-    .our-services .row .col-lg-4.col-md-6 {
+    .our-services .row .col-lg-3 .col-md-6 {
         margin-bottom: 20px;
     }
 
@@ -3078,10 +3048,6 @@ header.main-header .header-sticky.active {
 
     .price-carousel .price-item a {
         padding: 8px 16px;
-    }
-
-    .why-choose-us {
-        padding: 30px 0 10px;
     }
 
     .download-apps {
@@ -3559,4 +3525,19 @@ header.main-header .header-sticky.active {
     color: red;
     font-size: 0.85rem;
     margin-top: 0.25rem;
+}
+.row-wahed {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+@media (max-width: 991px) {
+    .row-wahed {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .row-wahed {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
